@@ -39,10 +39,10 @@ Get-ComputerRestorePoint | Format-Table -AutoSize
 vssadmin resize shadowstorage /on=c: /for=c: /maxsize=10%
 $Output = $wshell.Popup("Update Windows",10)
 #zakaz update windows 10 windows 11
-if(!(Test-Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate')){New-Item 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'}
-Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersion -value '00000001' -Type DWord –Force
-Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name "ProductVersion" -value 'Windows 10' -Type String -Force
-Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersionInfo -value '21H2' -Type String -Force
+#if(!(Test-Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate')){New-Item 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'}
+#Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersion -value '00000001' -Type DWord –Force
+#Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name "ProductVersion" -value 'Windows 10' -Type String -Force
+#Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersionInfo -value '21H2' -Type String -Force
 #https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=en-us&gl=US#activetab=pivot:overviewtab
 # actualizacia windows
 
